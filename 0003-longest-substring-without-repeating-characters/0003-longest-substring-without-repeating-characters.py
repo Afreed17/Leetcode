@@ -5,7 +5,6 @@ class Solution:
         length = 0
         for r in range(len(s)):
             char = s[r]
-            
             if char in seen and l <= seen[char]:
                 l = seen[char] + 1
             else:
