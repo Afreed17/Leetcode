@@ -3,8 +3,6 @@ class Solution:
         seen = {}
         l = 0
         length = 0
-        
-        
         for r in range(len(s)):
             char = s[r]
             
@@ -12,8 +10,7 @@ class Solution:
                 l = seen[char] + 1
             else:
                 length = max(length,r-l+1)
-            seen[char] = r
-            
+            seen[char] = r 
         return length
             
         
