@@ -1,18 +1,11 @@
 class Solution:
     def numberOfPoints(self, nums: List[List[int]]) -> int:
         
-        elarray = []
+        seen = set()
         
-        #sort the array based on first el
-        nums.sort(key = lambda x:x[0])
         
-        for i in range(len(nums)):
-            start = nums[i][0]
-            stop = nums[i][1]
-            for j in range(start,stop+1):
-                if j in elarray:
-                    continue
-                else:
-                    elarray.append(j)
-        return len(elarray)
+        for a,b in nums:
+            for i in range (a,b+1):
+                seen.add(i)
+        return len(seen)
         
